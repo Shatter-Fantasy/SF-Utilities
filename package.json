@@ -5,30 +5,28 @@
   "description": "This is the Editor Utilities developed by \nJonathan Westfall of Shatter Fantasy studio.",
   "documentationUrl": "",
   "keywords": [
-    "2D",
-    "Metroidvania",
-    "Template",
+    "Editor",
+    "Utilities",
+    "Asset Database",
     "Shatter Fantasy",
     "Jonathan Westfall"
   ],
   "category": "Template",
   "author": {
     "name": "Jonathan Westfall",
-    "url": "https://github.com/Shatter-Fantasy/com.shatter-fantasy.metroidvania-toolkit"
+    "url": "https://github.com/Shatter-Fantasy/SF-Editor-Utilities"
   },
   "repository": {
-    "url": "https://github.com/Unity-Technologies/com.unity.test-framework.git",
+    "url": "https://github.com/Shatter-Fantasy/SF-Editor-Utilities",
     "type": "git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/Shatter-Fantasy"
   },
   "_upm": {
-    "changelog": "### Changed\n- Started the 2D Character Controller"
+    "changelog": ""
   },
-  "unity": "2022.2",
+  "unity": "2023.2",
   "dependencies": {
-    "com.unity.cinemachine": "3.0.0-pre.4",
-    "com.unity.inputsystem": "1.5.1"
   }
 }
