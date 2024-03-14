@@ -1,8 +1,7 @@
-using System;
 using System.IO;
-
+#if UNITY_EDITOR
 using UnityEditor;
-
+#endif
 using UnityEngine;
 
 namespace SF.UICreator
@@ -10,6 +9,8 @@ namespace SF.UICreator
     public static class FileUtility
     {
         private static string DataPath => Application.dataPath;
+
+#if UNITY_EDITOR
         /// <summary>
         /// Creates a folder and any needed sub folders using the Assets directory as the root to place the folders in.
         /// </summary>
@@ -22,6 +23,7 @@ namespace SF.UICreator
             Directory.CreateDirectory(DataPath + "/" + folderPath);
             AssetDatabase.Refresh();
         }
+#endif
 
         public static bool IsFolderPathValid(string folderPath)
         {
