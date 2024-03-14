@@ -1,8 +1,8 @@
 {
-  "name": "shatter-fantasy.editorutilities",
-  "version": "0.0.1",
-  "displayName": "SF Editor Utilities",
-  "description": "This is the Editor Utilities developed by \nJonathan Westfall of Shatter Fantasy studio.",
+  "name": "shatter-fantasy.sf-utilities",
+  "version": "0.0.2",
+  "displayName": "SF Utilities",
+  "description": "This is the Editor Utilities developed by\nJonathan Westfall of Shatter Fantasy studio.",
   "documentationUrl": "",
   "keywords": [
     "Editor",
@@ -26,7 +26,5 @@
   "_upm": {
     "changelog": ""
   },
-  "unity": "2023.2",
-  "dependencies": {
-  }
+  "unity": "2023.2"
 }
