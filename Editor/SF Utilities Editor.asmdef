@@ -1,5 +1,5 @@
 {
-    "name": "SFEditorUtilities",
+    "name": "SF.Utilities.Editor",
     "rootNamespace": "SF.Editor",
     "references": [],
     "includePlatforms": [
