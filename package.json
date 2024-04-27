@@ -2,22 +2,22 @@
   "name": "shatter-fantasy.sf-utilities",
   "version": "0.0.2",
   "displayName": "SF Utilities",
-  "description": "This is the Editor Utilities developed by\nJonathan Westfall of Shatter Fantasy studio.",
+  "description": "This is the utilities classes developed by\nJonathan Westfall of Shatter Fantasy studio.",
   "documentationUrl": "",
   "keywords": [
-    "Editor",
     "Utilities",
     "Asset Database",
     "Shatter Fantasy",
-    "Jonathan Westfall"
+    "Jonathan Westfall",
+    "Community Package"
   ],
   "category": "Template",
   "author": {
     "name": "Jonathan Westfall",
-    "url": "https://github.com/Shatter-Fantasy/SF-Editor-Utilities"
+    "url": "https://github.com/Shatter-Fantasy"
   },
   "repository": {
-    "url": "https://github.com/Shatter-Fantasy/SF-Editor-Utilities",
+    "url": "https://github.com/Shatter-Fantasy/SF-Utilities",
     "type": "git"
   },
   "publishConfig": {
