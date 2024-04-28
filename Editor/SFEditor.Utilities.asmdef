@@ -1,7 +1,9 @@
 {
-    "name": "SF.Utilities.Editor",
-    "rootNamespace": "SF.Editor",
-    "references": [],
+    "name": "SFEditor.Utilities",
+    "rootNamespace": "SFEditor.Utilities",
+    "references": [
+        "GUID:a36038c41c31fd4468a7b4729e0e6ae4"
+    ],
     "includePlatforms": [
         "Editor"
     ],
