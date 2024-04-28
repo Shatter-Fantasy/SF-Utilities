@@ -47,8 +47,16 @@ namespace SF.Utilities
 
         public static Vector3Int GetBorderMinInt(this Bounds bounds)
         {
+
             Vector3Int vector3Int = new((int)bounds.min.x,(int)bounds.min.y,(int)bounds.min.z);
             return vector3Int;
+        }
+
+        public static void Deconstruct(this Vector3Int vector3Int, out int x, out int y, out int z)
+        {
+            x = vector3Int.x;
+            y = vector3Int.y;
+            z = vector3Int.z;
         }
 
         public static Vector3Int GetBorderSizeInt(this Bounds bounds)
