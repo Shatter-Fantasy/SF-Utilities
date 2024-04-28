@@ -62,5 +62,12 @@ namespace SF.Utilities
             return vectors.Cast<Vector2>().ToList();
         }
         #endregion
+
+        #region Vector Conversions
+        public static (int x, int y, int z) SpreadToInts(this Vector3 vector3)
+        {
+            return ((int)vector3.x, (int)vector3.y, (int)vector3.z);
+        }
+        #endregion
     }
 }
