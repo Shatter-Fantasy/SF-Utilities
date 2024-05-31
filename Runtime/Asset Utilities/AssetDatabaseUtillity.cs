@@ -6,7 +6,7 @@ using UnityEditor;
 #endif
 using UnityEngine;
 
-namespace SF.UICreator
+namespace SF.Utilities
 {
     public static class AssetDatabaseUtillity
     {
