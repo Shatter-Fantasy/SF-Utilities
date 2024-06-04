@@ -1,0 +1,9 @@
+changelog:
+  categories:
+    - title: New Features
+      labels:
+        - features
+        - release-notes
+    - title: Bug Fixes
+      labels:
+        - bug-fixes
