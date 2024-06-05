@@ -20,7 +20,7 @@
   ],
   "category": "Utilities",
   "repository": {
-    "url": "https://github.com/Shatter-Fantasy/SF-Utilities",
+    "url": "https://github.com/Shatter-Fantasy/SF-Utilities.git",
     "type": "git"
   },
   "_upm": {
