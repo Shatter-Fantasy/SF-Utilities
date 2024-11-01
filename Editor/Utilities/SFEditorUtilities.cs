@@ -2,7 +2,7 @@ using System.IO;
 
 using UnityEngine;
 
-namespace SF
+namespace SFEditor
 {
     public static class SFEditorUtilities
     {
