@@ -7,20 +7,16 @@ namespace SF.Utilities
 {
     /// <summary>
     /// This contains functions for converting Vectors to other vector types, pulling out Vector values, and making arrays of Vectors.
-    /// This is the non numeric Vector extension class.
     /// </summary>
     public static class VectorExtensions
     {
+
         #region Vector 2 Extensions
-        public static Vector3[] ToVector3Array(this Vector2[] vectors)
-        {
-            return vectors.Cast<Vector3>().ToArray();
-        }
+        public static Vector3[] ToVector3Array(this Vector2[] vectors) =>
+            vectors.Cast<Vector3>().ToArray();
         
-        public static List<Vector3> ToVector3List(this Vector2[] vectors)
-        {
-            return vectors.Cast<Vector3>().ToList();
-        }
+        public static List<Vector3> ToVector3List(this Vector2[] vectors) =>
+             vectors.Cast<Vector3>().ToList();
 
         /// <summary>
         /// Returns a Vector three with the x and y of the Vector2 passed in with another number to set the VectorZvalue.
