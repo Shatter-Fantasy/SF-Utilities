@@ -4,8 +4,12 @@ using UnityEditor;
 #endif
 using UnityEngine;
 
-namespace SF.Utilities
+namespace SFEditor.Utilities
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <remarks>This is kept in the runtime assembly due to being usful for times when needing to files like saves during runtime.</remarks>
     public static class FileUtility
     {
         private static string DataPath => Application.dataPath;
