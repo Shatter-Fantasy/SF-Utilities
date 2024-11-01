@@ -1,31 +1,28 @@
 using System.Collections.Generic;
 using System.IO;
 
-#if UNITY_EDITOR
 using UnityEditor;
-#endif
+
 using UnityEngine;
 
-namespace SF.Utilities
+namespace SFEditor.Utilities
 {
-    public static class AssetDatabaseUtillity
+    public static class AssetDatabaseEditorUtilities
     {
         private static string _cachedPath;
-#if UNITY_EDITOR
 
-
-        public static List<T> FindAssetsOfType<T>(string searchGlobFilter = "") where T :  Object
+        public static List<T> FindAssetsOfType<T>(string searchGlobFilter = "") where T : Object
         {
             List<T> assets = new List<T>();
             string[] guids = AssetDatabase.FindAssets($"{searchGlobFilter} t:{typeof(T).Name}");
 
-            foreach ( string guid in guids ) 
+            foreach(string guid in guids)
             {
                 _cachedPath = AssetDatabase.GUIDToAssetPath(guid);
 
                 assets.Add(AssetDatabase.LoadAssetAtPath<T>(_cachedPath));
             }
-            
+
             return assets;
         }
         /// <summary>
@@ -41,7 +38,7 @@ namespace SF.Utilities
             return AssetDatabase.LoadAssetAtPath<T>(_cachedPath);
         }
 
-        public static T GetOrCreateScriptableObject<T>(this string defaultPath) where T : ScriptableObject
+        public static T CreateScriptableObjectSafely<T>(this string defaultPath) where T : ScriptableObject
         {
             if(!FileUtility.IsFolderPathValid(defaultPath))
                 FileUtility.CreateFolderPath(defaultPath);
@@ -84,6 +81,34 @@ namespace SF.Utilities
         }
         #endregion
 
-#endif
+
+        /// <summary>
+        /// Gets the currently selected Unity Object asset in the editor and returns true if the asset matches the type passed in. If it is of the same type and returns true it will also out the object converted over to the defined type from the base UnityEngine.Object type. Retruns false if the asset is not of the type or is null.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="unityObject"></param>
+        /// <returns></returns>
+        public static bool TryGetSelectedObjectOfType<T>(out T unityObject) where T : Object
+        {
+            // If there is no Unity Object selected return early.
+            if(Selection.activeObject == null)
+            {
+                unityObject = null;
+                return false;
+            }
+
+            // If there is a Unity Object selected make sure it is the correct type.
+            if(Selection.activeObject?.GetType() == typeof(T))
+            {
+                // Convert from UnityEngine.Object to the wanted type and return true while outing the selected object.
+                unityObject = (T)Selection.activeObject;
+                return true;
+
+            }
+
+            unityObject = null;
+            return false;
+        }
+
     }
 }
