@@ -9,7 +9,7 @@
     "url": "https://www.linkedin.com/in/jonathan-westfall-shatter-fantasy/"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@USER"
+    "registry": "https://npm.pkg.github.com/@Shatter-Fantasy"
   },
   "documentationUrl": "",
   "keywords": [
@@ -20,10 +20,12 @@
   ],
   "category": "Utilities",
   "repository": {
-    "url": "https://github.com/Shatter-Fantasy/SF-Utilities.git",
-    "type": "git"
+    "url": "ssh://git@github.com:Shatter-Fantasy/SF-Utilities.git",
+    "type": "git",
+    "directory": "shatter-fantasy.sf-utilities"
   },
   "_upm": {
     "changelog": ""
-  }
+  },
+  "hideInEditor": false
 }
