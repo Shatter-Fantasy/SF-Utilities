@@ -14,7 +14,11 @@ namespace SF.Utilities
 
         private const int k_GridGizmoVertexCount = 32000;
         private const float k_GridGizmoDistanceFalloff = 50f;
-
+        
+        /// <summary>
+        /// This is used to store the Viewport before doing a viewport clip during clipping operations. This allows for restoring the pre clipped viewport rect.
+        /// </summary>
+        private static Rect _storedPreClippedViewPort = new();
         public static void InitHandleMaterial(CompareFunction zTest = CompareFunction.Always)
         {
             if(!DrawHandleMaterial)
@@ -31,7 +35,22 @@ namespace SF.Utilities
             InitHandleMaterial(zTest);
             DrawHandleMaterial.SetPass(0);
         }
+        public static void ClipViewPort(Rect viewPortRect, Vector2 clipOffset)
+        {
+            _storedPreClippedViewPort = viewPortRect;
 
+            // TODO: Check different types of view matrices to see if we need to minus instead of add the position.
+            viewPortRect.position -= clipOffset;
+            viewPortRect.size -= clipOffset;
+            GL.Viewport(new Rect(viewPortRect));
+        }
+        /// <summary>
+        /// Restores the Viewport rect to the value before it was clipped during any clipping operation.
+        /// </summary>
+        public static void RestorePreClippedViewRect()
+        {
+            GL.Viewport(_storedPreClippedViewPort);
+        }
         public static void StartDrawing(Matrix4x4 matrix, int drawMode = GL.LINES)
         {
             GL.PushMatrix();
@@ -204,6 +223,9 @@ namespace SF.Utilities
 
 #if UNITY_EDITOR
 
+        //TODO: All the functions here need converted over to the SF Material Handle System.
+
+        //Comes from Unity's Internal GridEditorUtility Class inside of the Unity.2D.Tilemap.Editor assembly.
         public static void DrawGridGizmo(GridLayout gridLayout, Transform transform, Color color, ref Mesh gridMesh, ref Material gridMaterial)
         {
             // TODO: Hook this up with DrawGrid
