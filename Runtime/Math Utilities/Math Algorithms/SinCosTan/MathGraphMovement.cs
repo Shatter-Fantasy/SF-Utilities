@@ -1,7 +1,8 @@
 using System;
 
+#if UNITY_EDITOR
 using UnityEditor;
-
+#endif
 using UnityEngine;
 
 namespace SF.Pathfinding
@@ -51,8 +52,8 @@ namespace SF.Pathfinding
 			}
 
 		}
-
-		private void OnDrawGizmosSelected()
+#if UNITY_EDITOR
+        private void OnDrawGizmosSelected()
 		{
 			Handles.color = Color.yellow;
 			Vector3 tangentStart = new Vector3(transform.position.x, transform.position.y + Amplitude,transform.position.z);
@@ -60,5 +61,6 @@ namespace SF.Pathfinding
 
 			Handles.DrawBezier(transform.position, transform.up, tangentStart, tangentEnd,Color.yellow,null,5);
 		}
+#endif
 	}
 }
