@@ -12,7 +12,15 @@
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
+    "defineConstraints": [
+        "SF_Utilities"
+    ],
+    "versionDefines": [
+        {
+            "name": "shatter-fantasy.sf-utilities",
+            "expression": "0.0.1",
+            "define": "SF_Utilities"
+        }
+    ],
     "noEngineReferences": false
 }
