@@ -1,3 +1,4 @@
+using Math = System.Math;
 using UnityEngine;
 
 namespace SF.Utilities
@@ -38,6 +39,16 @@ namespace SF.Utilities
             // Make sure first there is no negative values ot mess with the area calculations.
             rect = rect.AbsoluteRect();
             return rect.width * rect.height;
+        }
+        
+        public static RectInt GetMarqueeRect(Vector2Int p1, Vector2Int p2)
+        {
+            return new RectInt(
+                Math.Min(p1.x, p2.x),
+                Math.Min(p1.y, p2.y),
+                Math.Abs(p2.x - p1.x) + 1,
+                Math.Abs(p2.y - p1.y) + 1
+            );
         }
     }
 }
