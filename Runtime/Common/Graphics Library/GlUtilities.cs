@@ -65,6 +65,16 @@ namespace SF.Utilities
             GL.Begin(drawMode);
             GL.Color(color);
         }
+
+        public static void StartDrawingOrtho(int drawMode = GL.LINES)
+        {
+            GL.PushMatrix();
+            GL.LoadOrtho();
+            GL.Begin(drawMode);
+            GL.Color(GLColor);
+        }
+
+
         public static void EndDrawing()
         {
             GL.End();
@@ -111,6 +121,14 @@ namespace SF.Utilities
             DrawLine(points2, points3, width);
             DrawLine(points3, points0, width);
         }
+
+        public static void DrawTraingle(Vector3 p1, Vector3 p2, Vector3 p3)
+        {
+            GL.Vertex(p1);
+            GL.Vertex(p2);
+            GL.Vertex(p3);
+        }
+
 
         public static void DrawGridMarquee(GridLayout gridLayout, BoundsInt area, Color color)
         {
