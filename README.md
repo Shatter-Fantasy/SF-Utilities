@@ -23,6 +23,11 @@ MeshJob is used to schedule jobs defined in the IMeshGenerator being implemented
 This is being used in the ocean generator I am working on.
 Also useful for a work in progress sprite mesh generation tool I am working on for a custom 2D navmesh and raymarhcing system.
 
+> [!TIP]
+> The first image is a Youtube video link.
+
+[![Ocean Generation Test](https://img.youtube.com/vi/ryP10BY_mN0/0.jpg)](https://www.youtube.com/watch?v=ryP10BY_mN0)
+
 ![Ocean Rendering 2](https://github.com/user-attachments/assets/2ee82c99-f9fe-4223-8c20-18411ac34b9b)
 
 </details>
