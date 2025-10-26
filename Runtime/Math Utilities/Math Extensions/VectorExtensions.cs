@@ -33,6 +33,11 @@ namespace SF.Utilities
         {
             return new Vector2Int((int)vector2.x, (int)vector2.y);
         }
+        
+        public static Vector2Int ToVector2Int(this Vector3Int vector3)
+        {
+            return new Vector2Int(vector3.x, vector3.y);
+        }
         /// <summary>
         /// Allows choosing if the Vector2 is rounded down or rounded up  when converted to a Vector2Int.
         /// </summary>
