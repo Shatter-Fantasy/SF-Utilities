@@ -101,7 +101,7 @@ namespace SF.PhysicsLowLevel
             // NOTE: Normal is always in the direction of shape A to shape B so always ensure we're referring to it in context.
             var manifold = contact.manifold;
             var normal = shapeContext == contact.shapeB ? manifold.normal : -manifold.normal;
-            
+
             bool passFilter = filterMathOperator switch
             {
                 FilterMathOperator.GreaterThan => normal.x > normalizedXValue,
